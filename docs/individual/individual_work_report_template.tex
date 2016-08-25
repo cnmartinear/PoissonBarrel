@@ -1,0 +1,103 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1.0in]{geometry}
+\usepackage[USenglish]{isodate}
+\usepackage{tabularx}
+
+\begin{document}
+
+%------------------------------------------------------------------------------
+% Paper Title
+%------------------------------------------------------------------------------
+
+\begin{center}
+\Large{\textbf{CS499 - Senior Project: Team Software Design}}
+\rule{\textwidth}{1pt}
+\end{center}
+
+%------------------------------------------------------------------------------
+% Individual Work Report Section
+%------------------------------------------------------------------------------
+
+\begin{center}
+\Large{\textbf{Individual Work Report}}
+\end{center}
+
+\vspace{5mm}
+
+\begin{flushleft}
+\textbf{Name:} John/Jane Doe \\
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{Project Name:} Project Name \\
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{Date:} \printdate{2016-8-21} \\
+\end{flushleft}
+
+\vspace{5mm}
+\setlength{\tabcolsep}{20pt}
+\renewcommand{\arraystretch}{1.5}
+
+%------------------------------------------------------------------------------
+% Completed User Stories
+%------------------------------------------------------------------------------
+
+\begin{tabularx}{\textwidth}{|X|l|l|}
+    \hline \textbf{Completed User Stories for this Sprint}
+        & \textbf{Date Completed} \\
+    \hline New Feature \#1 & \printdate{2016-8-21} \\ 
+    \hline New Feature \#2 & \printdate{2016-8-21} \\
+    \hline New Feature \#3 & \printdate{2016-8-21} \\
+    \hline
+\end{tabularx}
+
+\vspace{5mm}
+
+%------------------------------------------------------------------------------
+% Other Completed Things
+%------------------------------------------------------------------------------
+
+\begin{tabularx}{\textwidth}{|X|l|l|}
+    \hline \textbf{Other Action Items Completed in this Sprint} \\
+    \hline Some Cool New Thing \#1 \\ 
+    \hline Some Cool New Thing \#2 \\
+    \hline Some Cool New Thing \#3 \\
+    \hline
+\end{tabularx}
+
+\pagebreak
+
+\begin{flushleft}
+\textbf{Problems Encountered:} \\
+\begin{itemize}
+    \item Encountered Problem \#1
+    \item Encountered Problem \#2
+\end{itemize}
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{Problem Resolutions:} \\
+\begin{itemize}
+    \item Resolved Problem \#1
+    \item Resolved Problem \#2
+\end{itemize}
+\end{flushleft}
+
+\vspace{10mm}
+
+%------------------------------------------------------------------------------
+% User Stories for Next Sprint
+%------------------------------------------------------------------------------
+
+\begin{tabularx}{\textwidth}{|X|l|l|}
+    \hline \textbf{User Stories Assigned for the next Sprint} \\
+    \hline New User Story \#1 \\ 
+    \hline New User Story \#2 \\
+    \hline New User Story \#3 \\
+    \hline
+\end{tabularx}
+
+\end{document}

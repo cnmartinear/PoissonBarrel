@@ -1,0 +1,32 @@
+
+0.0 Contents
+===============================================================================
+
+    1.0 Intro To Latex
+    2.0 Latex Editors
+
+
+1.0 Intro To Latex
+===============================================================================
+
+    Latex is document preparation system. It's different than the "what you see
+    is what you get", also known as WYSIWYG, programs like traditional
+    Microsoft Word and Open Office. Latex is written and compiled to get the
+    document. It's very popular in the academic setting and is used in lots of
+    workplaces. Programmers like it because it's just like writing code, and
+    can be used with version control.
+
+
+2.0 Latex Editors
+===============================================================================
+
+    My favorite Latex editor is TexMaker. It's free, cross-platform, and works
+    really well. You can find it at the following link:
+
+        http://www.xm1math.net/texmaker/
+
+    Once installed, simply open the files and start editing. Click "Quick
+    Build" near the top-middle of the program to build the document. If
+    successful, it should show up on the right side of the program in the PDF
+    viewer.
+
