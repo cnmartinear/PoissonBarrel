@@ -33,7 +33,7 @@ In terms of Python, this is simply the following:
     from operator import mul
 
     xs = [4, 36, 45, 50, 75]
-    gm = reduce(mul, xs, 1)
+    gm = reduce(mul, xs, 1)**(1.0/len(xs))
 
 #### Harmonic mean (HM)
 The harmonic mean is an average which is useful for sets of numbers which are
