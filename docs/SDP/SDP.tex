@@ -4,6 +4,8 @@
 \usepackage[USenglish]{isodate}
 \usepackage{tabularx}
 \usepackage[usenames, dvipsnames]{color}
+\usepackage{pbox}
+\usepackage{paralist}
 
 \vspace{5mm}
 \setlength{\tabcolsep}{20pt}
@@ -31,53 +33,157 @@
 \section{Project Overview}
 
 \subsection{Description}
+PoissonBarrel, is a statistical analysis software program which analyzes a set
+of data input by the user, makes calculations based on the statistical measure
+chosen by the user, and displays the results in a graph of the user's choice.
+For example, after entering the data, the user may choose a statistical measure
+for analysis (i.e. mean, median, mode, or standard deviation) and then choose a
+type of graph (i.e. vertical bar graph, X-Y Plot graph, table) to display the
+data. In short, PoissonBarrel functions similarly to Microsoft Excel. \\
 
-\subsection{Objectives}
+PoissonBarrel is named after the French mathematician Siméon Denis Poisson, a
+pioneer in modern probability theory and the namesake of the Poisson
+distribution. Poisson also means ``fish'' in French, and since this application
+is a ``barrel of'' statistical analyses.
+
+\subsection{Features}
+\begin{itemize}
+\item Allows the user to enter data for analysis
+\item Provides a list of statistical measures to analysis the data
+\item Provides a list of graph types to represent the data
+\item Displays graphical representation of analysis results
+\item Creates a text file summarizing analysis results
+\item Allows user to load, save, edit and delete analysis results
+\end{itemize}
+
+\subsection{Statistical Options}
+There are a number of supported statistical measure types. The types range from
+simple statistics, such as \textit{mean}, to more complex statistics, such as
+\textit{Chi Square}. These types are listed and described in the following
+table:
+
+\begin{center}
+\begin{tabularx}{\textwidth}{|X||p{72mm}|}
+\hline \textbf{Statistical Measure Types} & \\
+\hline Mean & Median \\
+\hline Mode & Standard Deviation \\
+\hline Variance & Coefficient of Variance \\
+\hline Standard Deviation & Percentiles \\
+\hline Probability Distribution & Binomial Distribution \\
+\hline Least Square Line & Chi Square \\
+\hline Correlation Coefficient & Sign Test \\
+\hline Rank Sum Test & Spearman Rank Correlation Coefficient \\
+\hline
+\end{tabularx}
+\end{center}
+
+There are also multiple supported chart/diagram types. These types are listed
+and described in the following table:
+
+\begin{center}
+\begin{tabularx}{\textwidth}{|X|}
+\hline \textbf{Chart/Diagram Types} \\
+\hline Horizontal/Vertical Bar Chart \\
+\hline Pie Chart \\
+\hline Normal Distribution Curve \\
+\hline X-Y Graph \\
+\hline
+\end{tabularx}
+\end{center}
+
+%------------------------------------------------------------------------------
+% Project Components
+%------------------------------------------------------------------------------
+
+\section{Components}
+\subsection{File I/O Components}
+There are three components that deal with file operations. These are listed and
+described in the following table:
+
+\begin{center}
+\begin{tabularx}{\textwidth}{|X|p{8cm}|}
+	\hline \textbf{File I/O Components} & \textbf{Description} \\
+	\hline Comma/Tab Delimited Files & The application contains a module that
+		enable it to read, validate, and write CSV files that can be viewed in
+		Microsoft Excel. \\
+	\hline Summary Text Files & The application writes text files that
+		summarize the statistical analysis performed by the user on the
+		document’s data. \\
+	\hline JPEG Image Files & The application has a module that allows the user
+		to create JPEG images of any chart or graph that the application
+		generates. \\
+	\hline
+\end{tabularx}
+\end{center}
+
+\subsection{Graphical User Interface}
+The largest component is the graphical interface. There are multiple
+sub-components that collectively make up the graphical interface. These
+components are listed and described in the following table:
+
+\begin{center}
+\begin{tabularx}{\textwidth}{|p{3cm}|X|}
+	\hline \textbf{Graphic User \newline Interface Components} &
+		\textbf{Description} \\
+	\hline Main Window & The application has a main window widget that allows
+		the user to interact with the displayed data through mouse and keyboard
+		input. Additionally, the main window contains a menu bar allowing the
+		user to open, close, and save documents, as well as providing access to
+		the Chart/Diagram Creation Wizard. \\
+	\hline Spreadsheet \newline Table & The application has a spreadsheet table
+		widget contained within the main window's client area that allows the
+		user to create, view, modify, and analyze statistical data. \\
+	\hline Open/Save File \newline Dialog Boxes & The application allows the
+		user to open and save files through the modal dialog boxes that provide
+		graphical user interface to the operating system's file management
+		system. \\
+	\hline Chart/Diagram \newline Creation Wizard Dialog & The application
+		provides a modeless dialog box that allows for user friendly creation
+		of charts and diagrams. \\
+	\hline Chart/Diagram Windows & The application generates and displays
+		charts and diagrams in a window separate from that of the of the main
+		window. Charts and diagrams are generated by the data contained within
+		the spreadsheet table. The window shall have an option that allows the
+		user to create a JPEG image file of the displayed chart. \\
+	\hline
+\end{tabularx}
+\end{center}
 
 %------------------------------------------------------------------------------
 % Project Schedule
 %------------------------------------------------------------------------------
 
 \section{Project Schedule}
-
-\subsection{Components}
-
-\subsubsection{GUI}
-
 \subsection{Deliverables}
-
 There are four project deliverables, as defined in the table below, that will
 be given to the customer. For each deliverable, there will be given a
 presentation of it to the customer.
 
 \begin{center}
 \begin{tabularx}{\textwidth}{|X|l|l|}
-    \hline \textbf{Deliverable} & \textbf{Deadline} \\
-    \hline Project Requirements and Backlog & \printdate{2016-9-27} \\ 
-    \hline Architectural Design & \printdate{2016-10-18} \\
-    \hline User Interface Design & \printdate{2016-11-3} \\
-    \hline Product Delivery & \printdate{2016-11-29} \\
-    \hline
+	\hline \textbf{Deliverable} & \textbf{Deadline} \\
+	\hline Project Requirements and Backlog & \printdate{2016-9-27} \\ 
+	\hline Architectural Design & \printdate{2016-10-18} \\
+	\hline User Interface Design & \printdate{2016-11-3} \\
+	\hline Product Delivery & \printdate{2016-11-29} \\
+	\hline
 \end{tabularx}
 \end{center}
 
 \subsection{Milestones}
-
 For this project, there are loosely defined milestones our team wishes to
 complete by certain deadlines. These milestones will encourage continuous
 development and mark certain stages of the project.
 
 \begin{center}
 \begin{tabularx}{\textwidth}{|X|l|l|}
-    \hline \textbf{Deliverable} & \textbf{Deadline} \\
-    \hline Create Proof-of-Concept GUI & \printdate{2016-9-6} \\ 
-    \hline Complete Mathematical Functions & \printdate{2016-1-1} \\
-    \hline Complete Presentation of Mathematical Functions & \printdate{2016-1-1} \\
-    \hline Compete GUI & \printdate{2016-1-1} \\
-    \hline Complete Import and Parsing of Data & \printdate{2016-1-1} \\
-    \hline Complete Final Project & \printdate{2016-1-1} \\
-    \hline Complete Verification and Validation of Project & \printdate{2016-1-1} \\
-    \hline
+	\hline \textbf{Milestone} & \textbf{Deadline} \\
+	\hline Create Proof-of-Concept GUI & \printdate{2016-9-13} \\
+	\hline Develop Statistical Algorithms and Spreadsheet UI &
+		\printdate{2016-9-29} \\
+	\hline Begin Testing on Statistical Functionality And Development on Chart
+		Generation & \printdate{2016-10-20} \\
+	\hline
 \end{tabularx}
 \end{center}
 
@@ -86,26 +192,31 @@ development and mark certain stages of the project.
 %------------------------------------------------------------------------------
 
 \section{Team Members}
-
 The team consists of four members. Each team member is assigned one unique
 position, in addition to the following positions: \textit{Requirements
 Analyst}, \textit{Designer}, \textit{Programmer}, \textit{Test Designer}, and
 \textit{Test}.
 
-\subsection{Richard Dunham\hfill\textit{Software Lead}}
-
+\subsection*{Richard Dunham\hfill\textit{Software Lead}}
 \textit{Please write me!}
 
-\subsection{Chelsie Martinear\hfill\textit{Customer Liaison}}
+\subsection*{Chelsie Martinear\hfill\textit{Customer Liaison}}
+Chelsie is a computer science and mathematical sciences major who has an
+extensive background in programming, numerical computation, and technical
+writing. Additionally, she has over five years of experience in customer
+relations. As a valuable member of this team, she is dedicated to the
+development of PoissonBarrel and is determined to put her best effort into
+delivering and presenting a polished product to the customer. 
 
-\textit{Please write me!}
+\subsection*{Joseph Richardson\hfill\textit{Scrum Master}}
+Joseph is returning to computer science after completing bachelor's and
+master's degrees in history, with additional background in classical languages
+and English literature. His liberal arts roots bring versatility and unique
+perspectives and skills to his work in information technology. Some of his
+fortes in computers include regular expressions, data mining, databases, and
+scripting languages.
 
-\subsection{Joseph Richardson\hfill\textit{Scrum Master}}
-
-\textit{Please write me!}
-
-\subsection{Justin Traglia\hfill\textit{Product Owner}}
-
+\subsection*{Justin Traglia\hfill\textit{Product Owner}}
 With over four years of software engineering experience, Justin is qualified to
 work on this project. He has experience working with small groups, agile
 programming development, version control, and documentation. With a completed
@@ -117,24 +228,92 @@ algorithms for this project, and should be a valuable member of the team.
 %------------------------------------------------------------------------------
 
 \section{Risk Management}
+As with all projects there are risks. Our team has conceived of eight possible
+risks. There will be a description of each risk, along with a plan of what to
+do if it were to happen.
 
-For this project, there are the following risks:
+\subsection*{Death or Dismemberment of Team Member(s)}
+\begin{tabular}{ l p{10cm} }
+	\textbf{Chance} & \textit{Minimal} \\
+	\textbf{Severity} & \textit{Catastrophic} \\
+	\textbf{Description} & If any of the group members were to die or lose body
+		parts essential to working on this project. \\
+	\textbf{Contingency} & Distribute the team member(s) share of the project
+		to the rest of the team. If all team members were to become unable to
+		work, this project would be the least of our concerns. \\
+\end{tabular}
 
-%
-% I'm not sure if a table is appropriate for this, it might be better to break
-% this up into sections. Or maybe even a list, so that you can go into more
-% detail about each risk.
-%
+\subsection*{Negligence of Group Member(s)}
+\begin{tabular}{ l p{10cm} }
+	\textbf{Chance} & \textit{Possible} \\
+	\textbf{Severity} & \textit{Marginal} \\
+	\textbf{Description} & If any of the team member(s) were to ``slack off''
+		and not do their part of the project. \\
+	\textbf{Contingency} & We would contact the customer and inform them of the
+		issue. If the issue is not solved, we would fire the team member(s),
+		distribute their share of the project to the rest of the team, and
+		continue working on the project. \\
+\end{tabular}
 
-\begin{center}
-\begin{tabularx}{\textwidth}{|X|l|l|}
-    \hline \textbf{Risk} & \textbf{Severity} \\
-    \hline We all die & \color{Red}Catastrophic \\
-    \hline We each lose a hand & \color{Orange}Critical \\
-    \hline Senioritis & \color{Yellow}Marginal \\
-    \hline We get sick once & \color{Green}Negligible \\
-    \hline
-\end{tabularx}
-\end{center}
+\subsection*{Unexpected Obligations Outside of Project}
+\begin{tabular}{ l p{10cm} }
+	\textbf{Chance} & \textit{Possible} \\
+	\textbf{Severity} & \textit{Marginal} \\
+	\textbf{Description} & Since every member of the team is a full-time
+		student, we all have obligations outside of this project. Obligations
+		such as exams and other class projects might temporarily prevent a team
+		member from working on their tasks. \\
+	\textbf{Contingency} & If this were to happen to a team member, their tasks
+		would be temporarily assigned to team members without such obligations.
+		Once free, the aforementioned tasks would be re-assigned back to the
+		original team member. \\
+\end{tabular}
+
+\subsection*{Team Member(s) Unavailable for Meetings}
+\begin{tabular}{ l p{10cm} }
+	\textbf{Chance} & \textit{Very Possible} \\
+	\textbf{Severity} & \textit{Marginal} \\
+	\textbf{Description} & Due to the team member's busy schedules, there might
+		be instances when certain members are unable to attend group meetings.
+		At times, the entire team may be unable to gather for a meeting. \\
+		\textbf{Contingency} & If the team is unable to meet in person, we will
+		have online meetings using \textit{Slack} and/or \textit{Skype}.\\
+\end{tabular}
+
+\subsection*{Poor Organization/Lack of Leadership}
+\begin{tabular}{ l p{10cm} }
+	\textbf{Chance} & \textit{Minimal} \\
+	\textbf{Severity} & \textit{Serious} \\
+	\textbf{Description} & If tasks are not properly broken up and reasonably
+		assigned, the project may become unorganized and as a result become
+		difficult to develop. Similarly, the team may lack direction if there
+		is no leader. \\
+	\textbf{Contingency} & If the project becomes unorganized, we will
+		temporarily stop development to re-organized the project. For
+		direction, the team must work together to create new tasks and move the
+		project forward. \\
+\end{tabular}
+
+\subsection*{Unable to Understand Math and Algorithms}
+\begin{tabular}{ l p{10cm} }
+	\textbf{Chance} & \textit{Possible} \\
+	\textbf{Severity} & \textit{Serious} \\
+	\textbf{Description} & Some of the statistical measures are unknown to the
+		team. If we are unable to understand these measures, we will not be
+		able to program them. \\
+	\textbf{Contingency} & If after research we still do not understand
+		anything, we will contact a mathematics professor and ask for help. \\
+\end{tabular}
+
+\subsection*{Challenging GUI Framework}
+\begin{tabular}{ l p{10cm} }
+	\textbf{Chance} & \textit{Very Possible} \\
+	\textbf{Severity} & \textit{Critical} \\
+	\textbf{Description} & The project language, Python, does not have many
+		good GUI frameworks. As a result, creating the graphical interface
+		might be difficult. \\
+	\textbf{Contingency} & Spend more time researching how to use the GUI
+		framework. Attempt to overcome it's faults. \\
+\end{tabular}
 
 \end{document}
