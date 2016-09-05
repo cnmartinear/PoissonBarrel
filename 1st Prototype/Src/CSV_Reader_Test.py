@@ -47,5 +47,5 @@ def testDocString():
     print( CSV_Reader.CSV_Reader.readFile.__doc__ )
     
 if __name__ == '__main__':
-    #main()
-    testDocString()
+    main()
+    #testDocString()
