@@ -57,10 +57,13 @@ is a ``barrel of'' statistical analyses.
 \end{itemize}
 
 \subsection{Statistical Options}
-There are a number of supported statistical measure types. The types range from
-simple statistics, such as \textit{mean}, to more complex statistics, such as
-\textit{Chi Square}. These types are listed and described in the following
-table:
+The following is a list of statistical functionality components which can be
+performed on the table data displayed by the application. To minimize code
+revision as new statistical components are added, the application will utilize
+the Strategy pattern. Meaning that all Statistical Component classes will be
+sub-classed from an abstract class containing a single method:
+\textit{compute()}. Each subclass will be required to provide its own
+implementation of \textit{compute()}.
 
 \begin{center}
 \begin{tabularx}{\textwidth}{|X||p{72mm}|}
@@ -183,6 +186,10 @@ development and mark certain stages of the project.
 		\printdate{2016-9-29} \\
 	\hline Begin Testing on Statistical Functionality And Development on Chart
 		Generation & \printdate{2016-10-20} \\
+	\hline Continue Statistical Functionality and GUI development/testing,
+		Develop non-required GUI features (Undo/Redo, Copy \& Path, Drag \&
+		Drop, AutoFill) & \printdate{2016-11-8} \\
+	\hline Complete All Testing and Release Product & \printdate{2016-11-22} \\
 	\hline
 \end{tabularx}
 \end{center}
@@ -198,7 +205,13 @@ Analyst}, \textit{Designer}, \textit{Programmer}, \textit{Test Designer}, and
 \textit{Test}.
 
 \subsection*{Richard Dunham\hfill\textit{Software Lead}}
-\textit{Please write me!}
+Richard Dunham is a Computer Science major with a minor in Mathematics. As an
+autodidactic programmer, Richard is well suited for Agile team development as
+he is proficient in designing flexible, customizable software through the use
+of the Object-Oriented paradigm. Additionally, Richard provides unique assets
+to the team with a background in Computational Geometry, Graph Theory, and
+Computer Graphics. When he is not coding, or pouring over API documentation,
+Richard enjoys mystery novels and the great outdoors.
 
 \subsection*{Chelsie Martinear\hfill\textit{Customer Liaison}}
 Chelsie is a computer science and mathematical sciences major who has an
