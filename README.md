@@ -50,6 +50,41 @@ In terms of Python, this is simply the following:
     hm = len(xs)/sum([1.0/x for x in xs])
 
 ### Median
+The median is the middle value(s) of a sorted set of values. The median can
+be one or two values depending on whether the number of values within the
+data set is even or odd.
+
+Computing the median in python:
+    
+    def median( dataList ):
+        
+        sortedSet = sorted( dataList )
+        
+        n = len( sortedSet )
+        midIndex = n // 2
+        
+        if n & 1:
+            return sortedSet[ midIndex ]
+            
+        else:
+            med1 = sortedSet[ midIndex - 1 ]
+            med2 = sortedSet[ midIndex ]
+            
+            if med1 == med2:
+                return med1
+                
+            else:
+                return ( med1, med2 )
+                
+Example calls to median:
+
+    >>> median( [ 8, 3, 5 ] )
+    5
+    >>> median( [ 9, 4, 6, 6 ] )
+    6
+    >>> median( [ 9, 8, 7, 6 ] )
+    (7, 8)
+            
 ### Mode
 ### Standard Deviation
 ### Variance
