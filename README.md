@@ -129,7 +129,7 @@ Calling mode() in python:
 ### Probability Distribution
 A (discrete) probability distribution is a listing of events(values) along with the 
 corresponding probability of the event occurring. The probability of each event 
-is computed by the frequecy of the event in the data set.
+is computed by the frequency of the event in the data set.
 
 Python Example:
     
