@@ -86,11 +86,88 @@ Example calls to median:
     (7, 8)
             
 ### Mode
+The mode is the value(s) that most frequently occurs within a data set.
+Python Example:
+    
+    def mode( dataList ):
+        
+        freqDict = {} 
+        modeList = []
+        maxFreq = 0
+
+        for val in dataList:
+
+            if val in freqDict:
+                freqDict[ val ] += 1
+
+            else:
+                freqDict[ val ] = 1
+
+        for val, freq in freqDict.items():
+
+            if maxFreq < freq:
+                modeList.clear()
+                modeList.append( val )
+                maxFreq = freq
+
+            elif maxFreq == freq:
+                modeList.append( val )
+
+        return modeList
+        
+Calling mode() in python:
+
+    >>> mode( [ 9, 9, 8, 8, 8, 10, 11, 15 ] )
+    [8]
+    >>> mode( [ 1, 1, 2, 3, 3, 5 ] )
+    [1, 3]
+    
 ### Standard Deviation
 ### Variance
 ### Coefficent of Variance
 ### Percentiles
 ### Probability Distribution
+A (discrete) probability distribution is a listing of events(values) along with the 
+corresponding probability of the event occurring. The probability of each event 
+is computed by the frequecy of the event in the data set.
+
+Python Example:
+    
+    #helper function for sorting tuples
+    def getKey( tup ):
+        return tup[ 0 ]
+
+    def probDist( dataList ):
+
+        probDict = {}
+        ONE_OVER_N = 1.0 / len( dataList )
+
+        for val in dataList:
+
+            if val in probDict:
+                probDict[ val ] += ONE_OVER_N
+
+            else:
+                probDict[ val ] = ONE_OVER_N
+                
+        return sorted( probDict.items(), key = getKey )
+        
+        
+Calling probDist() from python:
+   
+    >>> dist = probDist( [ 1, 1, 2, 3, 4, 4, 4, 5, 6, 7, 7, 9 ] )
+    >>> for e, p in dist:
+	        print( 'Event:', e, 'Probability', p )
+
+    Event: 1 Probability 0.16666666666666666
+    Event: 2 Probability 0.08333333333333333
+    Event: 3 Probability 0.08333333333333333
+    Event: 4 Probability 0.25
+    Event: 5 Probability 0.08333333333333333
+    Event: 6 Probability 0.08333333333333333
+    Event: 7 Probability 0.16666666666666666
+    Event: 9 Probability 0.08333333333333333
+
 ### Least Square Line
 ### Chi Square
 ### Correlation Coefficent
