@@ -191,6 +191,7 @@ m = Rise / Run
 b = (Sum(Y) - m * Sum(X)) / n
 
 In Python:
+	
 	def leastSqrLine( pntList ):
 
     		n = len( pntList )
