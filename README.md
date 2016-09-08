@@ -168,7 +168,67 @@ Calling probDist() from python:
     Event: 7 Probability 0.16666666666666666
     Event: 9 Probability 0.08333333333333333
 
-### Least Square Line
+### Least Square Line([Reference](https://www.youtube.com/watch?v=1pawL_5QYxE))
+Given a set of 2-dimensional cartesian points, the Least Square Line function
+computes the slope and y-intercept of a line that approximates the relationship
+between the two variables(X, Y). The line is considered the "best fit" as it
+minimizes the sum of squares of the errors.
+
+Formulas:
+
+n = the number of points in the set
+
+X = the set of all x components in the point set
+
+Y = the set fo all y components in the point set
+
+Rise = n * Sum(X*Y) - Sum(X)*Sum(Y)
+
+Run = n * Sum(X^2) - Sum(X)^2
+
+m = Rise / Run
+
+b = (Sum(Y) - m * Sum(X)) / n
+
+In Python:
+	def leastSqrLine( pntList ):
+
+    		n = len( pntList )
+
+    		sumOfProducts = 0.0
+    		sumX = 0.0
+    		sumY = 0.0
+    		sumOfSqrs = 0.0
+
+    		for x, y in pntList:
+
+        		sumX += x
+        		sumY += y
+
+        		sumOfSqrs += x ** 2.0
+        		sumOfProducts += x * y
+        	
+    		rise = n * sumOfProducts - sumX * sumY
+    		run =  n * sumOfSqrs - sumX ** 2.0
+
+    		slope = rise / run
+
+    		yIntercept = ( sumY - slope * sumX ) / n
+
+    		return slope, yIntercept
+    		
+Verified Test:
+	
+	def leastSqrLineTest():
+    		l = [(0.0,-.8),(2.0,-1.0),(4.0,-.2),(6.0,.2),(8.0,-2.0),(10.0,.8),(12.0,-.6) ]
+    		m, b = leastSqrLine( l )
+    		print( 'Slope:',m )
+    		print( 'Y-Intercept:', b )
+
+    	>>> leastSqrLineTest()
+    	Slope: 0.04285714285714287
+    	Y-Intercept: -0.7714285714285715
+
 ### Chi Square
 ### Correlation Coefficent
 ### Sign Test
