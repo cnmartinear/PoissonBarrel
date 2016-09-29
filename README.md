@@ -123,7 +123,11 @@ Calling mode() in python:
     [1, 3]
     
 ### Standard Deviation
+	
 ### Variance
+The variance is the sum of each value within the data set minus the mean squared.
+
+SumOf( ( N(i) - mean( N ) )^2 )
 ### Coefficent of Variance
 ### Percentiles
 ### Probability Distribution
